@@ -33,12 +33,23 @@ public class Task24 {
         Iterator iterator = present.iterator();
         int sumPrice = 0, sumWeight = 0;
         Sweet buf;
+        System.out.print("Present: ");
         while(iterator.hasNext()){
             buf = (Sweet) iterator.next();
             sumPrice += buf.getPrice();
             sumWeight += buf.getWeight();
+            if(buf.getParameter().equals("Red")){
+                System.out.print("Candy ");
+            }
+            if(buf.getParameter().equals("Jelly")){
+                System.out.print("Jellybean ");
+            }
+            if(buf.getParameter().equals("Round")){
+                System.out.print("Lollipop ");
+            }
         }
 
+        System.out.println("");
         //Output total price and weight
         System.out.printf("Total price: %d Total weight: %d",sumPrice,sumWeight);
     }
